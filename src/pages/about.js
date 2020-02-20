@@ -3,7 +3,21 @@ import Layout from "../components/layout"
 
 export default () => (
   <Layout>
-    <h1>About me</h1>
-    <p>I’m good enough, I’m smart enough, and gosh darn it, people like me!</p>
+    <h1>Behind the Beer</h1>
+    <p>
+      Brainstem started out of a desire to try something new.
+      After a few brews from a Mr. Beer Kit and a year and a half long hiatus,
+      Brainstem started brewing regularly.
+    </p>
+    <p>
+      After the Mr. Beer kit, Brainstem graduated to the setup nearly all
+      homebrewers start with: a plastic bucket, a big pot, and a lot of malt
+      extract.
+    </p>
+    <p>
+      Nowadays, Brainstem brews on a classic, three vessel system in a row-home
+      in West-Philly, Pennsylvania, USA. So, come on down for a brew and good
+      'ole time!
+    </p>
   </Layout>
 )
