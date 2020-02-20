@@ -37,7 +37,7 @@ exports.createPages = async ({ graphql, actions }) => {
         path: node.fields.slug,
         component: path.resolve("./src/pages/beer.js"),
         context: {
-          alt_id: node.fields.slug
+          slug: node.fields.slug
         },
       });
   })
