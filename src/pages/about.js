@@ -1,8 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default () => (
   <Layout>
+    <SEO title={"About"} />
     <h1>Behind the Beer</h1>
     <p>
       Brainstem started out of a desire to try something new.

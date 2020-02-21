@@ -1,10 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import { graphql } from "gatsby";
 
 const Beer = ({ data }) => {
     return (
       <Layout>
+        <SEO title={data.beersRecipes.title} />
         <h2>{data.beersRecipes.title}</h2>
         <p>{data.beersRecipes.stylename}</p>
         <p>{data.beersRecipes.abv}% ABV</p>

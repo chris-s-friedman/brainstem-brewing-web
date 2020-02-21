@@ -5,8 +5,28 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Brainstem Brewing`,
+    description: `Basement-based homebrewing in West Philly`,
+    author: `Chris Friedman`,
   },
   plugins:[
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Brainstem Brewing`,
+        short_name: `Brainstem`,
+        start_url: `/`,
+        background_color: `#6b37bf`,
+        theme_color: `#6b37bf`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `src/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    // React Helmet
+    `gatsby-plugin-react-helmet`,
+    // Favicon
+    //`gatsby-plugin-favicon`,
     // Typography
     {
       resolve: 'gatsby-plugin-typography',
