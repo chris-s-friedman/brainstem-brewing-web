@@ -34,7 +34,9 @@ export default ({ children }) => {
       </header>
       {children}
       <div className={styles.footer}>
-        <p>Built with :heart: using Gatsby </p>
+        <p>
+          Built with love, using <a href ="https://www.gatsbyjs.org/">Gatsby</a>
+        </p>
       </div>
     </div>
   )
