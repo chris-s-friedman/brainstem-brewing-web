@@ -57,6 +57,9 @@ module.exports = {
         headers: {
           "X-API-KEY": process.env.brewersfriend_api_key
         },
+        params: {
+          limit: 999
+        },
       name: `recipes`,
       entityLevel: 'recipes'
       },
