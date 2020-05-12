@@ -1,9 +1,13 @@
 .footer {
-  position: relative;
-  /*left: 0;*/
+  position: fixed;
+  left: 0;
   bottom: 0;
   width: 100%;
-  /*background-color: red;
-  color: white;
-  text-align: center;*/
+  background-color: white;
+  text-align: center;
+  padding:20px 0;
+}
+
+header {
+  background-color: white;
 }
