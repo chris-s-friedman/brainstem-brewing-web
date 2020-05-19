@@ -36,14 +36,12 @@ export const query = graphql`
   query {
     allBeersRecipes(filter: {id: {ne: "dummy"},
                              alternative_id: {ne: null},
-                             folder_name: {nin: ["prospective", "upcoming"]}},
-                    sort: {order: ASC, fields: stylename}) {
+                             folder_name: {nin: ["prospective", "upcoming"]}}) {
       edges {
         node {
           fields {
             slug
           }
-          folder_name
           title
           stylename
           abv
