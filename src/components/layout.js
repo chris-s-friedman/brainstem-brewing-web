@@ -35,16 +35,28 @@ export default ({ children }) => {
       </header>
       {children}
       <div className={styles.footer}>
-        <div style={{width: "50%", margin:"0 auto"}}>
-        <div style={{ textAlign: 'left', float: 'left' }}>
-          <p>Brewed by <a href="https://www.chris-s-friedman.com">Chris Friedman</a></p>
-        </div>
-        <div style={{ textAlign: 'right', float: 'right' }}>
-          <p><a href="https://github.com/chris-s-friedman/brainstem-brewing-web">Github</a></p>
-        </div>
-        <div style={{textAlign: 'center'}}>
-          <p>Find me on <a href ="https://www.brewersfriend.com/homebrew/brewer/116508/brainstem-brewing">Brewer's Friend</a></p>
-        </div>
+        <div style={{ width: "50%", margin: "0 auto" }}>
+          <div style={{ textAlign: "left", float: "left" }}>
+            <p>
+              Brewed by{" "}
+              <a href="https://www.chris-s-friedman.com">Chris Friedman</a>
+            </p>
+          </div>
+          <div style={{ textAlign: "right", float: "right" }}>
+            <p>
+              <a href="https://github.com/chris-s-friedman/brainstem-brewing-web">
+                Github
+              </a>
+            </p>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <p>
+              Find me on{" "}
+              <a href="https://www.brewersfriend.com/homebrew/brewer/116508/brainstem-brewing">
+                Brewer's Friend
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
