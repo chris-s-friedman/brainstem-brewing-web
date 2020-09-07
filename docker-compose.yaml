@@ -4,7 +4,7 @@ services:
   client:
     build:
       context: ./brainstem-web
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     volumes: # Links the source files to the running container
       - ./brainstem-web/src:/app/src
     ports: ["3000:8000"]
