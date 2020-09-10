@@ -21,7 +21,7 @@ export default ({ data }) => {
           <tbody>
             {data.allBeersRecipes.edges.map(({ node }, index) => (
               <tr key={index}>
-                <td><Link to={node.fields.slug}>{node.title}</Link></td>
+                <td><Link to={("/beers/" + node.fields.slug)}>{node.title}</Link></td>
                 <td>{node.stylename}</td>
                 <td>{node.abv}</td>
               </tr>
