@@ -7,9 +7,9 @@ export default ({ data }) => {
   console.log(data)
   return (
     <Layout>
-      <SEO title={"Beers"} />
+      <SEO title={"On Tap"} />
       <div>
-        <h1>Beers</h1>
+        <h1>On Tap</h1>
         <table>
           <thead>
             <tr>
@@ -36,8 +36,7 @@ export const query = graphql`
   query {
     allBeersRecipes(filter: {id: {ne: "dummy"},
                              alternative_id: {ne: null},
-                             folder_name: {nin: ["prospective", "upcoming"]}},
-                    sort: {order: ASC, fields: stylename}) {
+                             folder_name: {eq: "on_tap"}}) {
       edges {
         node {
           fields {
