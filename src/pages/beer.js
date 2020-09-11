@@ -20,6 +20,7 @@ const Beer = ({ data }) => {
         </a>
       </p>
       <p>{data.beersRecipes.notes}</p>
+      // put a table for session notes here
     </Layout>
   )
 }
