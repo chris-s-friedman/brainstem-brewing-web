@@ -25,20 +25,31 @@ const Beer = ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String) {
-    beersRecipes(fields: { slug: { eq: $slug } }) {
+  query($recipe_id: String) {
+    allBeersBrewsessions(filter: {recipeid: {eq: $recipe_id}}) {
+      nodes {
+        alternative_id
+        batchcode
+        recipeid
+        recipe_title
+        phase
+      }
+    }
+    beersRecipes(alternative_id: {eq: $recipe_id}) {
       abv
-      title
       alternative_id
+      brew_sessions
+      title
+      stylename
       og
       fg
-      stylename
-      notes
       fields {
         slug
       }
-    }
+      folder_name
+      notes
   }
+}
 `
 
 export default Beer
