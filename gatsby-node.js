@@ -51,6 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: node.fields.slug,
         folder_name: node.folder_name,
+        recipe_id: node.alternative_id,
       },
     })
   })
