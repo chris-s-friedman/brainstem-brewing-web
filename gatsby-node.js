@@ -55,34 +55,3 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
-
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const result = await graphql(`
-    query {
-      allBeersBrewsessions(
-        filter: { id: { ne: "dummy" }, alternative_id: { ne: null } }
-      ) {
-        edges {
-          node {
-            alternative_id
-            recipeid
-            recipe_title
-            batchcode
-            phase
-          }
-        }
-      }
-    }
-  `)
-  result.data.allBeersRecipes.edges.forEach(({ node }) => {
-    createPage({
-      path: ("brew-session/" + node.alternative_id),
-      component: path.resolve("./src/pages/brew-session.js"),
-      context: {
-        slug: node.fields.slug,
-        folder_name: node.folder_name,
-      },
-    })
-  })
-}
