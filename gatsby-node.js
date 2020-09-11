@@ -78,7 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allBeersRecipes.edges.forEach(({ node }) => {
     createPage({
       path: ("beer-recipes/" + node.alternative_id),
-      component: path.resolve("./src/pages/beer.js"),
+      component: path.resolve("./src/pages/beer-recipe.js"),
       context: {
         slug: node.fields.slug,
         folder_name: node.folder_name,
