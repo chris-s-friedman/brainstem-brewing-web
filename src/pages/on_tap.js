@@ -21,7 +21,7 @@ export default ({ data }) => {
           <tbody>
             {data.allBeersRecipes.edges.map(({ node }, index) => (
               <tr key={index}>
-                <td><Link to={("/beers/" + node.fields.slug)}>{node.title}</Link></td>
+                <td><Link to={("/beers/" + node.alternative_id)}>{node.title}</Link></td>
                 <td>{node.stylename}</td>
                 <td>{node.abv}</td>
               </tr>
@@ -39,6 +39,7 @@ export const query = graphql`
                              folder_name: {eq: "on_tap"}}) {
       edges {
         node {
+          alternative_id
           fields {
             slug
           }
