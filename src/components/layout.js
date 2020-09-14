@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, Link } from "gatsby"
 import styles from "./layout.module.css"
+import { graphql } from 'gatsby'
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
