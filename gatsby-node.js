@@ -19,7 +19,6 @@ const fetchFermentation = session_id =>
     config
   )
 
-<<<<<<< HEAD
 exports.onCreateNode = ({
   node,
   actions,
@@ -30,10 +29,6 @@ exports.onCreateNode = ({
     createNodeField,
     createParentChildLink
   } = actions
-=======
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNode, createNodeField } = actions
->>>>>>> a7c6cae4f8590a308194c12fbd3c6f81f9473be1
   if (node.internal.type === "beers__recipes" && node.id != "dummy") {
     const slug = slugify(node.title)
     console.log(slug)
@@ -75,11 +70,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             const readingNode = {
               // Required fields
               id: reading.id,
-<<<<<<< HEAD
               parent: node.id,
-=======
-              parent: "__SOURCE__",
->>>>>>> a7c6cae4f8590a308194c12fbd3c6f81f9473be1
               internal: {
                 type: `fermentationReading`, // name of the graphQL query --> allRandomUser {}
                 // contentDigest will be added just after
@@ -115,15 +106,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             readingNode.internal.contentDigest = contentDigest
 
             // Create node with the gatsby createNode() API
-<<<<<<< HEAD
             createNode(readingNode);
             // console.log(node)
             createParentChildLink({ parent: node, child: readingNode });
           });
-=======
-            createNode(readingNode)
-          })
->>>>>>> a7c6cae4f8590a308194c12fbd3c6f81f9473be1
         }
       })
       .catch(function(error) {
@@ -146,7 +132,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-<<<<<<< HEAD
 // Query the fermentation api
 exports.sourceNodes = async ({
   actions,
@@ -224,10 +209,6 @@ exports.createPages = async ({
   const {
     createPage
   } = actions
-=======
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
->>>>>>> a7c6cae4f8590a308194c12fbd3c6f81f9473be1
   const result = await graphql(`
     query {
       allBeersRecipes(
